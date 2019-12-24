@@ -1,0 +1,12 @@
+zuul:
+  routes:
+    auth-service:
+      path: /auth/**
+      url: http://localhost:8082
+      sensitiveHeaders: Cookie,Set-Cookie
+    calories:
+      serviceId: calories-service
+      path: /calories/**
+      url: http://localhost:8081
+      sensitiveHeaders: Cookie,Set-Cookie
+
